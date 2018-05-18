@@ -14,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView nameTextView;
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mNameRef = mRootRef.child("name");
+    DatabaseReference mNamesListRef = mRootRef.child("names");
+    DatabaseReference mNameRef = mNamesListRef.child("name1");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
